@@ -3,36 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio profesional de Carlos Negrete, AI Engineer y Desarrollador"
+    />
+    <meta
+      name="keywords"
+      content="portfolio, desarrollador, AI engineer, Carlos Negrete"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Portfolio</title>
+    <title>Portfolio | Carlos Negrete</title>
   </head>
   <body>
     <header>
       <a href="#" class="logo">Carlos Negrete</a>
 
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
       <nav>
-        <a href="#" class="active"> Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Education</a>
-        <a href="#">Contact</a>
+        <a href="#home" class="active">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
-    <section class="home">
+
+    <section id="home" class="home">
       <div class="home-img">
-        <img src="mine.jpeg" alt="" />
+        <img src="mine.jpeg" alt="Carlos Negrete" />
       </div>
       <div class="home-content">
         <h1>Hi, It's <span>Carlos</span></h1>
         <h3 class="typing-text">I'm a <span></span></h3>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus labore
-          dolores esse. Odit similique doloribus tenetur doloremque, sunt
-          commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam
-          quaerat neque asperiores ea.
+          Passionate developer specializing in AI solutions and web development.
+          I create efficient, scalable applications with cutting-edge
+          technologies.
         </p>
         <div class="social-icons">
           <a href="#"><i class="fa-brands fa-linkedin"></i></a>
@@ -40,8 +52,41 @@
           <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
-        <a href="#" class="btn">Hire me</a>
+        <a href="#contact" class="btn">Hire me</a>
       </div>
     </section>
+
+    <section id="projects" class="projects">
+      <h2 class="section-title">My <span>Projects</span></h2>
+      <div class="projects-container">
+        <!-- Proyectos se añadirán aquí con JavaScript -->
+      </div>
+    </section>
+
+    <section id="education" class="education">
+      <h2 class="section-title">My <span>Education</span></h2>
+      <div class="timeline">
+        <!-- Educación se añadirá aquí con JavaScript -->
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="section-title">Get in <span>Touch</span></h2>
+      <form class="contact-form">
+        <div class="input-group">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <input type="text" placeholder="Subject" />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Carlos Negrete. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
