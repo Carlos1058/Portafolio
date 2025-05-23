@@ -163,7 +163,7 @@ span {
 
 .home-img img {
   position: relative;
-  width: 32vw;
+  width: 27vw;
   border-radius: 50%;
   border: 5px solid var(--primary-color);
   box-shadow: 0 0 30px rgba(106, 20, 163, 0.2);
@@ -368,7 +368,7 @@ footer {
   }
 
   .home-img img {
-    width: 70vw;
+    width: 45vw;
     margin-top: 4rem;
   }
 
