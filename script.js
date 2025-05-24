@@ -21,8 +21,73 @@ document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
   });
+  
+});
 
-  // Podrías añadir aquí la carga dinámica de proyectos y educación
-  // fetchProjects();
-  // fetchEducation();
+
+// Filtrado de proyectos
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  // Función para filtrar proyectos
+  function filterProjects(category) {
+    projectCards.forEach(card => {
+      const cardCategory = card.dataset.category;
+      
+      if (category === 'all' || cardCategory === category) {
+        card.style.display = 'block';
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 50);
+      } else {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          card.style.display = 'none';
+        }, 300);
+      }
+    });
+  }
+
+  // Event listeners para los botones de filtro
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remover clase 'active' de todos los botones
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      
+      // Añadir clase 'active' al botón clickeado
+      this.classList.add('active');
+      
+      // Filtrar proyectos según la categoría
+      const filterValue = this.dataset.filter;
+      filterProjects(filterValue);
+    });
+  });
+
+  // Modal para demos
+  const modal = document.getElementById('demo-modal');
+  const modalVideo = document.getElementById('modal-video');
+  const closeModal = document.querySelector('.close-modal');
+
+  function openModal(videoSrc) {
+    modal.style.display = 'block';
+    modalVideo.src = videoSrc;
+    document.body.style.overflow = 'hidden'; // Bloquear scroll
+  }
+
+  closeModal.addEventListener('click', function() {
+    modal.style.display = 'none';
+    modalVideo.pause();
+    document.body.style.overflow = 'auto'; // Restaurar scroll
+  });
+
+  window.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      modalVideo.pause();
+      document.body.style.overflow = 'auto';
+    }
+  });
 });

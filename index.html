@@ -39,7 +39,7 @@
         <img src="mine.jpeg" alt="Carlos Negrete" />
       </div>
       <div class="home-content">
-        <h1>Hi, It's <span>Carlos</span></h1>
+        <h1>Hey, It's <span>Carlos</span></h1>
         <h3 class="typing-text">I'm a <span></span></h3>
         <p>
           Passionate developer specializing in AI solutions and web development.
@@ -58,15 +58,136 @@
 
     <section id="projects" class="projects">
       <h2 class="section-title">My <span>Projects</span></h2>
+      
+      <!-- Filtro por tecnologías -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+      </div>
+
       <div class="projects-container">
-        <!-- Proyectos se añadirán aquí con JavaScript -->
+        <!-- Proyecto 1 -->
+        <div class="project-card" data-category="ai">
+          <div class="project-preview">
+            <img src="proyecto-app.png" alt="Sistema de recomendación IA" class="project-image">
+            <div class="project-hover">
+              <a href="https://github.com/tuusuario/ia-recommendation" target="_blank" class="preview-btn">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <button class="preview-btn demo-btn" onclick="openModal('demo-ia.mp4')">
+                <i class="fas fa-play"></i> Demo
+              </button>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Sistema de Recomendación IA</h3>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">Pandas</span>
+            </div>
+            <p>Sistema que predice preferencias de usuarios con un 92% de precisión.</p>
+            <div class="project-stats">
+              <span><i class="fas fa-star"></i> 120 GitHub stars</span>
+              <span><i class="fas fa-code-branch"></i> 15 forks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="project-card" data-category="web">
+          <div class="project-preview">
+            <img src="proyecto-app.png" alt="E-commerce React" class="project-image">
+            <div class="project-hover">
+              <a href="https://github.com/tuusuario/ecommerce-react" target="_blank" class="preview-btn">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://ecommerce-demo.com" target="_blank" class="preview-btn demo-btn">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>E-commerce Fullstack</h3>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+            <p>Plataforma con carrito de compras, autenticación y pasarela de pagos.</p>
+            <div class="project-stats">
+              <span><i class="fas fa-users"></i> 500+ usuarios</span>
+              <span><i class="fas fa-bolt"></i> 300ms respuesta</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="project-card" data-category="mobile">
+          <div class="project-preview">
+            <img src="proyecto-app.png" alt="App de tareas" class="project-image">
+            <div class="project-hover">
+              <a href="https://github.com/tuusuario/task-manager" target="_blank" class="preview-btn">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <button class="preview-btn demo-btn" onclick="openModal('demo-app.mp4')">
+                <i class="fas fa-mobile-alt"></i> Preview
+              </button>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Task Manager App</h3>
+            <div class="project-tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">BLoC</span>
+            </div>
+            <p>Aplicación móvil multiplataforma con sincronización en la nube.</p>
+            <div class="project-stats">
+              <span><i class="fas fa-download"></i> 1K+ descargas</span>
+              <span><i class="fas fa-thumbs-up"></i> 4.8/5 rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal para demos -->
+      <div id="demo-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <video id="modal-video" controls>
+            Tu navegador no soporta videos HTML5.
+          </video>
+        </div>
       </div>
     </section>
 
     <section id="education" class="education">
       <h2 class="section-title">My <span>Education</span></h2>
       <div class="timeline">
-        <!-- Educación se añadirá aquí con JavaScript -->
+        <div class="timeline-container">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-date">2020 - 2024</div>
+            <div class="timeline-content">
+              <h3>Computer Science Degree</h3>
+              <h4>University Name</h4>
+              <p>Specialized in AI and Machine Learning. Graduated with honors.</p>
+            </div>
+          </div>
+          
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-date">2018 - 2020</div>
+            <div class="timeline-content">
+              <h3>Web Development Bootcamp</h3>
+              <h4>Coding Academy</h4>
+              <p>Full-stack development with React and Node.js.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
