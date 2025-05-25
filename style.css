@@ -388,7 +388,7 @@ footer {
 }
 
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 4px;
   background-color: var(--primary-color);
@@ -412,7 +412,7 @@ footer {
 }
 
 .timeline-item::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -461,7 +461,7 @@ footer {
 
 /* Puntos en la línea */
 .timeline-item::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
@@ -478,13 +478,13 @@ footer {
   .timeline::before {
     left: 31px;
   }
-  
+
   .timeline-content {
     width: calc(100% - 8rem);
     float: none !important;
     margin-left: 8rem;
   }
-  
+
   .timeline-date {
     position: relative;
     width: auto;
@@ -495,17 +495,16 @@ footer {
     margin-bottom: 1rem;
     display: inline-block;
   }
-  
+
   .timeline-item::before {
     left: 31px;
   }
-  
+
   .timeline-item:nth-child(odd) .timeline-date,
   .timeline-item:nth-child(even) .timeline-date {
     margin-left: 8rem;
   }
 }
-
 
 /* ---------------------------PROJECTS SECTION - Estilos mejorados------------------------------ */
 .projects {
@@ -727,16 +726,16 @@ footer {
   .project-filters {
     gap: 0.5rem;
   }
-  
+
   .filter-btn {
     padding: 0.6rem 1.5rem;
     font-size: 1.4rem;
   }
-  
+
   .project-preview {
     height: 180px;
   }
-  
+
   .modal-content {
     width: 95%;
     margin: 10% auto;
@@ -747,14 +746,50 @@ footer {
   .projects-container {
     grid-template-columns: 1fr;
   }
-  
+
   .project-hover {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .preview-btn {
     padding: 0.8rem 1.5rem;
     font-size: 1.3rem;
+  }
+}
+
+/* ---------------------------------Cursor Styles--------------------------------- */
+
+/* Desactiva TODOS los cursores del sistema */
+* {
+  cursor: none !important;
+}
+
+/* Refuerza el cursor personalizado */
+.custom-cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2147483647; /* Máximo valor posible */
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease;
+  /* Estilo cuando está sobre elementos interactivos */
+  &.active {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(106, 20, 163, 0.2);
+    border-width: 3px;
+  }
+}
+
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none;
+  }
+  html * {
+    cursor: auto !important;
   }
 }
