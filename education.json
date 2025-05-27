@@ -1,0 +1,18 @@
+[
+  {
+    "period": "2020 - 2024",
+    "title": "Computer Science Degree",
+    "institution": "University Name",
+    "description": "Specialized in AI and Machine Learning. Graduated with honors.",
+    "tags": ["AI", "Algorithms", "Data Structures"],
+    "icon": "fas fa-graduation-cap"  
+  },
+  {
+    "period": "2018 - 2020",
+    "title": "Web Development Bootcamp",
+    "institution": "Coding Academy",
+    "description": "Full-stack development with React and Node.js.",
+    "tags": ["JavaScript", "React", "Node.js"],
+    "icon": "fas fa-laptop-code"
+  }
+]

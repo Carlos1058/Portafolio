@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Machine Learning Specialization",
+    "platform": "Coursera",
+    "date": "2023",
+    "url": "https://coursera.org/certificate/...",
+    "badge": "coursera-ml-badge.png",
+    "skills": ["Python", "TensorFlow", "Scikit-learn"]
+  },
+  {
+    "title": "React Advanced",
+    "platform": "Udemy",
+    "date": "2022",
+    "url": "https://www.udemy.com/certificate/UC-73fbab99-e03f-4c67-8c23-3657614516fe/",
+    "badge": "/assets/certifications/python_en_16_dias.jpg",
+    "skills": ["React", "Hooks", "Context API"]
+  },
+  {
+    "title": "AWS Certified Cloud Practitioner",
+    "platform": "Amazon Web Services",
+    "date": "2023",
+    "url": "https://aws.amazon.com/certification/...",
+    "badge": "aws-cloud-badge.png",
+    "skills": ["Cloud Computing", "AWS", "S3"]
+  }
+]
