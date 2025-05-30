@@ -1,18 +1,18 @@
 [
   {
     "title": "Machine Learning Specialization",
-    "platform": "Coursera",
+    "platform": "Udemy",
     "date": "2023",
-    "url": "https://coursera.org/certificate/...",
-    "badge": "coursera-ml-badge.png",
-    "skills": ["Python", "TensorFlow", "Scikit-learn"]
+    "url": "https://www.udemy.com/certificate/UC-73fbab99-e03f-4c67-8c23-3657614516fe/",
+    "badge": "/Portafolio/assets/pythonen16dias.jpg",
+    "skills": ["Python", "Django"]
   },
   {
     "title": "React Advanced",
     "platform": "Udemy",
     "date": "2022",
     "url": "https://www.udemy.com/certificate/UC-73fbab99-e03f-4c67-8c23-3657614516fe/",
-    "badge": "/assets/certifications/python_en_16_dias.jpg",
+    "badge": "/Portafolio/assets/proyecto-app.png",
     "skills": ["React", "Hooks", "Context API"]
   },
   {
@@ -20,7 +20,7 @@
     "platform": "Amazon Web Services",
     "date": "2023",
     "url": "https://aws.amazon.com/certification/...",
-    "badge": "aws-cloud-badge.png",
+    "badge": "/Portafolio/assets/aws-cloud-badge.png",
     "skills": ["Cloud Computing", "AWS", "S3"]
   }
 ]
