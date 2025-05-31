@@ -1,31 +1,25 @@
 [
   {
-    "title": "Sistema de traqueo de animales 'BalamIA'",
+    "title": "Animal Tracking System 'BalamIA'",
     "category": "ai",
     "image": "../assets/pythonen16dias.jpg",
-    "alt": "Sistema de recomendación IA",
-    "github": "https://github.com/tuusuario/ia-recommendation",
+    "alt": "Animal Tracking System",
+    "github": "https://github.com/Carlos1058/BalamIA.git",
     "demo": "demo-ia.mp4",
-    "description": "Sistema que predice preferencias de usuarios con un 92% de precisión.",
-    "tags": ["Python", "TensorFlow", "Pandas"],
-    "stats": [
-      { "icon": "fas fa-star", "text": "120 GitHub stars" },
-      { "icon": "fas fa-code-branch", "text": "15 forks" }
-    ]
+    "description": "Tracking system for animal movements using AI and computer vision.",
+    "tags": ["Python", "OpenCV", "TKinter"],
+    "stats": []
   },
   {
-    "title": "E-commerce Fullstack",
-    "category": "web",
+    "title": "Check-Me",
+    "category": "ai",
     "image": "proyecto-app.png",
-    "alt": "E-commerce React",
-    "github": "https://github.com/tuusuario/ecommerce-react",
-    "live": "https://ecommerce-demo.com",
-    "description": "Plataforma con carrito de compras, autenticación y pasarela de pagos.",
-    "tags": ["React", "Node.js", "MongoDB"],
-    "stats": [
-      { "icon": "fas fa-users", "text": "500+ usuarios" },
-      { "icon": "fas fa-bolt", "text": "300ms respuesta" }
-    ]
+    "alt": "Check-Me",
+    "github": "https://github.com/Carlos1058/Check-Me",
+    "live": "https://check-me-demo.com",
+    "description": "A web application designed to efficiently track and manage the entry and exit of individuals, providing real-time monitoring and secure record-keeping.",
+    "tags": ["100% Python", "UI/UX"],
+    "stats": []
   },
   {
     "title": "Task Manager App",
@@ -36,9 +30,6 @@
     "demo": "demo-app.mp4",
     "description": "Aplicación móvil multiplataforma con sincronización en la nube.",
     "tags": ["Flutter", "Firebase", "BLoC"],
-    "stats": [
-      { "icon": "fas fa-download", "text": "1K+ descargas" },
-      { "icon": "fas fa-thumbs-up", "text": "4.8/5 rating" }
-    ]
+    "stats": []
   }
 ]
