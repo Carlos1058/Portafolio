@@ -2,34 +2,46 @@
   {
     "title": "Animal Tracking System 'BalamIA'",
     "category": "ai",
-    "image": "../assets/pythonen16dias.jpg",
+    "image": "/assets/projects/balamia.png",
     "alt": "Animal Tracking System",
     "github": "https://github.com/Carlos1058/BalamIA.git",
-    "demo": "demo-ia.mp4",
+    "demo": "assets/projects/demo_balamia.mp4",
     "description": "Tracking system for animal movements using AI and computer vision.",
     "tags": ["Python", "OpenCV", "TKinter"],
     "stats": []
   },
   {
-    "title": "Check-Me",
+    "title": "Check out System 'Check-Me'",
     "category": "ai",
-    "image": "proyecto-app.png",
+    "image": "/assets/projects/checkme.png",
     "alt": "Check-Me",
     "github": "https://github.com/Carlos1058/Check-Me",
-    "live": "https://check-me-demo.com",
+    "demo": "https://check-me-demo.com",
     "description": "A web application designed to efficiently track and manage the entry and exit of individuals, providing real-time monitoring and secure record-keeping.",
     "tags": ["100% Python", "UI/UX"],
     "stats": []
   },
   {
-    "title": "Task Manager App",
-    "category": "mobile",
-    "image": "proyecto-app.png",
-    "alt": "App de tareas",
-    "github": "https://github.com/tuusuario/task-manager",
-    "demo": "demo-app.mp4",
-    "description": "Aplicación móvil multiplataforma con sincronización en la nube.",
-    "tags": ["Flutter", "Firebase", "BLoC"],
+    "title": "Online Store 'Amaazona'",
+    "category": "web",
+    "image": "/assets/projects/amaazona.png",
+    "alt": "Online Store Amaazona",
+    "github": "https://github.com/Miguel281298/Amaazona",
+    "live": "http://arfa-ai.com/Amaazona/",
+    "description": "An online store application, featuring user authentication, product management, and a shopping cart.",
+    "tags": ["PHP", "MySQL", "Bootstrap", "CSS", "HTML"],
+    "stats": []
+  },
+  {
+    "title": "A simple cientific calculator",
+    "category": "app",
+    "image": "/assets/projects/calculator.png",
+    "alt": "Scientific Calculator",
+    "github": "https://github.com/Carlos1058/cientific-calculator",
+
+    "description": "A simple scientific calculator with basic arithmetic operations and scientific functions.",
+    "tags": ["Xamarin", "C#"],
     "stats": []
   }
+
 ]

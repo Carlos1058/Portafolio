@@ -84,14 +84,14 @@ async function loadProjects() {
                 <i class="${
                   project.live
                     ? "fas fa-external-link-alt"
-                    : project.category === "mobile"
+                    : project.category === "app"
                     ? "fas fa-mobile-alt"
                     : "fas fa-play"
                 }"></i> 
                 ${
                   project.live
                     ? "Live"
-                    : project.category === "mobile"
+                    : project.category === "app"
                     ? "Preview"
                     : "Demo"
                 }
