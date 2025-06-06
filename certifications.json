@@ -4,23 +4,15 @@
     "platform": "Udemy",
     "date": "2023",
     "url": "https://www.udemy.com/certificate/UC-73fbab99-e03f-4c67-8c23-3657614516fe/",
-    "badge": "assets/certifications/python_en_16_dias.jpg",
+    "badge": "assets/certifications/python-avanzado.jpg",
     "skills": ["Python", "Django"]
   },
   {
-    "title": "React Advanced",
-    "platform": "Udemy",
-    "date": "2022",
-    "url": "https://www.udemy.com/certificate/UC-73fbab99-e03f-4c67-8c23-3657614516fe/",
-    "badge": "assets/certifications/proyecto-app.png",
-    "skills": ["React", "Hooks", "Context API"]
-  },
-  {
-    "title": "AWS Certified Cloud Practitioner",
-    "platform": "Amazon Web Services",
-    "date": "2023",
-    "url": "https://aws.amazon.com/certification/...",
-    "badge": "assets/certifications/aws-cloud-badge.png",
-    "skills": ["Cloud Computing", "AWS", "S3"]
+    "title": "Introducing Generative AI with AWS",
+    "platform": "Udacity",
+    "date": "2025",
+    "url": "https://www.udacity.com/certificate/e/b8d395e6-3e3f-11f0-bea5-6b52677bc099",
+    "badge": "assets/certifications/generative-ai.jpg",
+    "skills": ["Generative AI", "AWS", "Machine Learning"]
   }
 ]

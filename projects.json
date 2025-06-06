@@ -2,7 +2,7 @@
   {
     "title": "Animal Tracking System 'BalamIA'",
     "category": "ai",
-    "image": "/assets/projects/balamia.png",
+    "image": "assets/projects/balam-ia.jpg",
     "alt": "Animal Tracking System",
     "github": "https://github.com/Carlos1058/BalamIA.git",
     "demo": "assets/projects/demo_balamia.mp4",
@@ -11,9 +11,9 @@
     "stats": []
   },
   {
-    "title": "Check out System 'Check-Me'",
+    "title": "Check in System 'Check-Me'",
     "category": "ai",
-    "image": "/assets/projects/checkme.png",
+    "image": "assets/projects/checkme.jpg",
     "alt": "Check-Me",
     "github": "https://github.com/Carlos1058/Check-Me",
     "demo": "https://check-me-demo.com",
@@ -24,7 +24,7 @@
   {
     "title": "Online Store 'Amaazona'",
     "category": "web",
-    "image": "/assets/projects/amaazona.png",
+    "image": "assets/projects/amaazona.jpg",
     "alt": "Online Store Amaazona",
     "github": "https://github.com/Miguel281298/Amaazona",
     "live": "http://arfa-ai.com/Amaazona/",
@@ -35,10 +35,9 @@
   {
     "title": "A simple cientific calculator",
     "category": "app",
-    "image": "/assets/projects/calculator.png",
+    "image": "assets/projects/calculator.jpg",
     "alt": "Scientific Calculator",
     "github": "https://github.com/Carlos1058/cientific-calculator",
-
     "description": "A simple scientific calculator with basic arithmetic operations and scientific functions.",
     "tags": ["Xamarin", "C#"],
     "stats": []

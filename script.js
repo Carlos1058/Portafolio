@@ -191,7 +191,7 @@ async function loadCertifications() {
       <div class="project-card">
         <div class="project-preview">
           <img src="${cert.badge}" alt="${cert.title || "Certification badge"}" 
-               class="project-image" onerror="this.src='assets/certifications/default-badge.jpg'">
+               class="project-image" onerror="this.src='assets/various/error-default.jpg'">
           <div class="project-hover">
             <a href="${
               cert.url
