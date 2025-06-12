@@ -51,6 +51,30 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(addHoverEffect, 2000);
 });
 
+// Tema oscuro/claro
+const themeToggle = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
+
+// Aplica el tema guardado al cargar la página
+document.documentElement.setAttribute('data-theme', currentTheme);
+updateIcon();
+
+// Alternar tema al hacer clic
+themeToggle.addEventListener('click', () => {
+  const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateIcon();
+});
+
+// Actualizar icono según el tema
+function updateIcon() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  themeToggle.setAttribute('aria-label', isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro');
+}
+
+
 // =============================================
 // FUNCIONES PRINCIPALES
 // =============================================

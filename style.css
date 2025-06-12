@@ -833,3 +833,44 @@ footer {
   margin-top: 1rem;
   cursor: pointer;
 }
+
+
+/* Estilos para el botón de tema */
+.theme-toggle {
+  background: transparent;
+  color: var(--text-color);
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem;
+  margin-left: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
+  color: var(--primary-color);
+}
+
+/* Variables para tema oscuro */
+[data-theme="dark"] {
+  --primary-color: #9c4dff;
+  --secondary-color: #1a1a1a;
+  --background-color: #121212;
+  --text-color: #f0f0f0;
+  --text-light: #aaa;
+}
+
+/* Ajustes específicos para el tema oscuro */
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .timeline-content {
+  background: #1e1e1e;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .contact-form input,
+[data-theme="dark"] .contact-form textarea {
+  background: #1e1e1e;
+  border-color: #333;
+  color: white;
+}
