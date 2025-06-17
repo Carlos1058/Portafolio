@@ -111,8 +111,18 @@
     <section id="courses" class="courses">
       <h2 class="section-title">Relevant <span>Coursework</span></h2>
       
+      <!-- Filtros (solo "All" estático, los demás se generan automáticamente) -->
+      <div class="course-filters">
+        <button class="filter-btn active" data-filter="all">
+          All
+          <span class="filter-count"></span>
+        </button>
+        <!-- Los botones de semestre se generarán aquí -->
+      </div>
+      
+      <!-- Contenedor de tarjetas -->
       <div class="courses-container">
-        <!-- Se generará dinámicamente desde JSON -->
+        <!-- Las tarjetas se cargarán dinámicamente desde courses.json -->
       </div>
     </section>
 

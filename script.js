@@ -346,31 +346,140 @@ function addHoverEffect() {
       );
     });
 }
-
-// Función para cargar cursos desde JSON
 async function loadCourses() {
   try {
     const response = await fetch("courses.json");
     const courses = await response.json();
     const container = document.querySelector(".courses-container");
+    const filterContainer = document.querySelector(".course-filters");
 
-    container.innerHTML = courses.map(course => `
-      <div class="course-card">
-        <h3>${course.name}</h3>
-        <p><strong>Level:</strong> ${course.level}</p>
-        <p><strong>Year:</strong> ${course.year}</p>
-        <div class="course-skills">
-          ${course.skills.map(skill => `<span class="tech-tag">${skill}</span>`).join("")}
+    // Limpiar filtros existentes (excepto el botón "All")
+    const existingButtons = Array.from(filterContainer.querySelectorAll('.filter-btn'));
+    existingButtons.slice(1).forEach(btn => btn.remove());
+
+    // Obtener semestres únicos y ordenarlos
+    const semesterMap = new Map();
+    courses.forEach(course => {
+      const semesterNum = course.year.match(/\d+/)?.[0] || 0;
+      const id = course.year.toLowerCase().split(' ')[0]; // "1st", "2nd", etc.
+      if (!semesterMap.has(id)) {
+        semesterMap.set(id, {
+          id,
+          text: course.year,
+          num: parseInt(semesterNum)
+        });
+      }
+    });
+    const semesters = Array.from(semesterMap.values()).sort((a, b) => a.num - b.num);
+
+    // Generar botones de filtro dinámicamente (uno por semestre)
+    semesters.forEach(semester => {
+      if (semester.id !== 'all') {
+        const btn = document.createElement("button");
+        btn.className = "filter-btn";
+        btn.dataset.filter = semester.id;
+        btn.innerHTML = `
+          <span>${semester.text}</span>
+          <span class="filter-count" data-semester="${semester.id}" style="display:none"></span>
+        `;
+        filterContainer.appendChild(btn);
+      }
+    });
+
+    // Actualizar contadores
+    updateCourseCounts(courses);
+
+    // Renderizar cursos
+    container.innerHTML = courses.map(course => {
+      const semesterId = course.year.toLowerCase().split(' ')[0];
+      return `
+        <div class="course-card" data-semester="${semesterId}">
+          <h3>${course.name}</h3>
+          <p class="course-semester">${course.year}</p>
+          ${course.description ? `<p class="course-description">${course.description}</p>` : ''}
+          <div class="course-skills">
+            ${course.skills.map(skill => `<span class="tech-tag">${skill}</span>`).join("")}
+          </div>
+          ${course.category ? `<span class="course-category">${course.category}</span>` : ''}
         </div>
-      </div>
-    `).join("");
+      `;
+    }).join("");
+
+    // Configurar los filtros
+    setupCourseFilters();
+
   } catch (error) {
     console.error("Error loading courses:", error);
+    document.querySelector(".courses-container").innerHTML = `
+      <p class="error-message">⚠️ Error loading courses. Please try again later.</p>
+    `;
   }
 }
-// Llama a la función al cargar la página
-loadCourses();
 
+// Función para actualizar contadores de cursos por semestre
+function updateCourseCounts(courses) {
+  const counts = {};
+
+  // Contar cursos por semestre
+  courses.forEach(course => {
+    const semesterId = course.year.toLowerCase().split(' ')[0];
+    counts[semesterId] = (counts[semesterId] || 0) + 1;
+  });
+
+  // Actualizar DOM
+  Object.entries(counts).forEach(([semesterId, count]) => {
+    const countElement = document.querySelector(`.filter-count[data-semester="${semesterId}"]`);
+    if (countElement) {
+      countElement.textContent = ` (${count})`;
+      countElement.style.display = 'inline';
+    }
+  });
+
+  // Mostrar contador para "All"
+  const allCount = document.querySelector('.filter-btn[data-filter="all"] .filter-count');
+  if (allCount) {
+    allCount.textContent = ` (${courses.length})`;
+    allCount.style.display = 'inline';
+  }
+}
+
+// Configuración de filtros (idéntico al de proyectos pero para cursos)
+function setupCourseFilters() {
+  const filterButtons = document.querySelectorAll(".course-filters .filter-btn");
+  const courseCards = document.querySelectorAll(".course-card");
+
+  function filterCourses(semester) {
+    courseCards.forEach((card) => {
+      const cardSemester = card.dataset.semester;
+      if (semester === "all" || cardSemester.includes(semester)) {
+        card.style.display = "block";
+        setTimeout(() => {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }, 50);
+      } else {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        setTimeout(() => {
+          card.style.display = "none";
+        }, 300);
+      }
+    });
+  }
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function() {
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
+      filterCourses(this.dataset.filter);
+    });
+  });
+}
+
+// Asegúrate de llamar a loadCourses() al final del archivo:
+document.addEventListener("DOMContentLoaded", () => {
+  loadCourses();
+});
 
 // Contact Form Handling
 document.getElementById('contactForm')?.addEventListener('submit', async (e) => {

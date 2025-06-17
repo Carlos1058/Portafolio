@@ -558,6 +558,46 @@ footer {
   margin-bottom: 4rem;
 }
 
+.course-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+/* Estilos para los contadores en los filtros */
+.filter-count {
+  font-size: 0.9em;
+  margin-left: 5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Estilos adicionales para las tarjetas de cursos */
+.course-semester {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.course-description {
+  font-size: 1.4rem;
+  color: var(--text-light);
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.course-category {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.3rem 1rem;
+  background: rgba(106, 20, 163, 0.1);
+  color: var(--primary-color);
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+
 .filter-btn {
   padding: 0.8rem 2rem;
   background: transparent;

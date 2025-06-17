@@ -1,6 +1,6 @@
 [
   {
-    "title": "Advanced Python Programming in 16 days",
+    "title": "Advanced Python Programming",
     "platform": "Udemy",
     "date": "2023",
     "url": "https://www.udemy.com/certificate/UC-73fbab99-e03f-4c67-8c23-3657614516fe/",
@@ -14,5 +14,37 @@
     "url": "https://www.udacity.com/certificate/e/b8d395e6-3e3f-11f0-bea5-6b52677bc099",
     "badge": "assets/certifications/generative-ai.jpg",
     "skills": ["Generative AI", "AWS", "Machine Learning"]
+  },
+  {
+    "title": "Diferential Equations for Engineers",
+    "platform": "Udemy",
+    "date": "June 2025",
+    "url": "https://www.udemy.com/certificate/UC-bac30a67-2053-403c-9c8f-93cfe18654d8/",
+    "badge": "assets/certifications/ed.png",
+    "skills": ["Mathematics", "Differential Equations", "Engineering"]
+  },
+  {
+    "title": "Total English Course: Beginner to Advanced/ +115 Hours",
+    "platform": "Udemy",
+    "date": "progress",
+    "url": "https://www.udemy.com/share/104uNE3@lBxRFbWLCnaPjcZJi1-jM6-Af11THLYl6ufsznc25GdfCL37-HQrtOAg9P4NKGIl_w==/",
+    "badge": "assets/certifications/english.png",
+    "skills": ["English", "Language Learning", "Communication"]
+  },
+  {
+    "title": "Python for Data Science and Machine Learning",
+    "platform": "Udemy",
+    "date": "progress",
+    "url": "https://www.udemy.com/share/10b4443@HLa19GTpeaJCqPHXU1FfKNJC49qfE137Z4EhMHczHV_KYSsnZ8hV55tNF93hyGwS3w==/",
+    "badge": "assets/certifications/data-scientist.jpg",
+    "skills": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"]
+  },
+  {
+    "title": "Machine Learning of A to Z: R and Python to Data Science",
+    "platform": "Udemy",
+    "date": "progress",
+    "url": "https://www.udemy.com/share/101WJ03@UVqbXX6UNk-zfjY7bnCIazcdKGVyKtwm2T8Yq2aF2be2KC1hUM2Ky7YVeva7sUaniw==/",
+    "badge": "assets/certifications/a-z.png",
+    "skills": ["Machine Learning", "Data Science", "Python", "R"]
   }
 ]
