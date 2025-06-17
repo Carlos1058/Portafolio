@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Computer Languages I",
+    "year": "1st Semester",
+    "skills": ["Python"],
+    "category": "programming",
+    "description": "Introduction to programming fundamentals using Python"
+  },
+  {
+    "name": "Computational Structures Fundamentals",
+    "year": "1st Semester",
+    "skills": ["Algorithms", "Logic"],
+    "category": "fundamentals",
+    "description": "Basic computational thinking and problem-solving"
+  },
+  {
+    "name": "Computer Languages II",
+    "year": "2nd Semester",
+    "skills": ["C++"],
+    "category": "programming",
+    "description": "Object-oriented programming with C++"
+  },
+  {
+    "name": "Computational Structures",
+    "year": "2nd Semester",
+    "skills": ["Data Structures", "C++"],
+    "category": "fundamentals",
+    "description": "Implementation of fundamental data structures"
+  },
+  {
+    "name": "Computer Languages III",
+    "year": "3rd Semester",
+    "skills": ["Java", "Web Development"],
+    "category": "programming",
+    "description": "Web application development using Java"
+  },
+  {
+    "name": "Advanced Computational Structures",
+    "year": "3rd Semester",
+    "skills": ["Advanced Algorithms", "Java"],
+    "category": "fundamentals",
+    "description": "Analysis and design of complex algorithms"
+  },
+  {
+    "name": "Artificial Intelligence",
+    "year": "3rd Semester",
+    "skills": ["AI Concepts", "Machine Learning", "Web Scraping"],
+    "category": "ai",
+    "description": "Introduction to artificial intelligence principles"
+  },
+  {
+    "name": "Computer Languages IV",
+    "year": "4th Semester",
+    "skills": ["Java"],
+    "category": "programming",
+    "description": "Advanced Java programming concepts"
+  },
+  {
+    "name": "Scientific Programming",
+    "year": "4th Semester",
+    "skills": ["Python", "Scientific Computing", "C++"],
+    "category": "programming",
+    "description": "Numerical methods and scientific applications"
+  },
+  {
+    "name": "Intelligent Development Techniques",
+    "year": "4th Semester",
+    "skills": ["Agile Methodologies"],
+    "category": "development",
+    "description": "Smart approaches to software development processes"
+  },
+  {
+    "name": "Intelligent Optimization",
+    "year": "5th Semester",
+    "skills": ["C++", "Optimization Algorithms"],
+    "category": "optimization",
+    "description": "Advanced algorithmic optimization techniques"
+  },
+  {
+    "name": "Automata Theory I",
+    "year": "5th Semester",
+    "skills": ["Automata Theory"],
+    "category": "theory",
+    "description": "Formal languages and finite automata"
+  },
+  {
+    "name": "Intelligent Languages",
+    "year": "5th Semester",
+    "skills": ["Python", "Machine Learning"],
+    "category": "ai",
+    "description": "Programming languages for AI applications"
+  },
+  {
+    "name": "Databases",
+    "year": "5th Semester",
+    "skills": ["SQL", "Database Design"],
+    "category": "databases",
+    "description": "Relational database systems and design"
+  },
+  {
+    "name": "Computational Complexity Theory",
+    "year": "6th Semester",
+    "skills": ["Algorithm Analysis"],
+    "category": "theory",
+    "description": "Study of problem difficulty and classification"
+  },
+  {
+    "name": "Intelligent Learning",
+    "year": "6th Semester",
+    "skills": ["Machine Learning", "Python"],
+    "category": "ai",
+    "description": "Machine learning algorithms and applications"
+  },
+  {
+    "name": "Operating Systems Introduction",
+    "year": "6th Semester",
+    "skills": ["Linux", "Kernel Basics"],
+    "category": "systems",
+    "description": "Fundamentals of operating system design"
+  }
+]

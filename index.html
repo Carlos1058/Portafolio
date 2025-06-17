@@ -30,6 +30,7 @@
         <a href="#home" class="active">Home</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
+        <a href="#courses">Courses</a>
         <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -107,6 +108,14 @@
       </div>
     </section>
 
+    <section id="courses" class="courses">
+      <h2 class="section-title">Relevant <span>Coursework</span></h2>
+      
+      <div class="courses-container">
+        <!-- Se generará dinámicamente desde JSON -->
+      </div>
+    </section>
+
     <section id="certifications" class="certifications">
       <h2 class="section-title">My <span>Certifications</span></h2>
 
@@ -117,14 +126,25 @@
 
     <section id="contact" class="contact">
       <h2 class="section-title">Get in <span>Touch</span></h2>
-      <form class="contact-form">
+      <form id="contactForm" class="contact-form" 
+            action="https://formspree.io/f/mdkzdnnw" 
+            method="POST">
+        
         <div class="input-group">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
         </div>
-        <input type="text" placeholder="Subject" />
-        <textarea placeholder="Your Message" required></textarea>
+        
+        <input type="text" name="_subject" placeholder="Subject">
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        
+        <!-- Campo oculto para redirección después del envío (opcional) -->
+        <input type="hidden" name="_next" value="thanks.html">
+        
         <button type="submit" class="btn">Send Message</button>
+        
+        <!-- Mensaje de estado (lo añadiremos con JavaScript) -->
+        <p id="formStatus" class="form-status"></p>
       </form>
     </section>
 

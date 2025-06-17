@@ -346,3 +346,63 @@ function addHoverEffect() {
       );
     });
 }
+
+// Función para cargar cursos desde JSON
+async function loadCourses() {
+  try {
+    const response = await fetch("courses.json");
+    const courses = await response.json();
+    const container = document.querySelector(".courses-container");
+
+    container.innerHTML = courses.map(course => `
+      <div class="course-card">
+        <h3>${course.name}</h3>
+        <p><strong>Level:</strong> ${course.level}</p>
+        <p><strong>Year:</strong> ${course.year}</p>
+        <div class="course-skills">
+          ${course.skills.map(skill => `<span class="tech-tag">${skill}</span>`).join("")}
+        </div>
+      </div>
+    `).join("");
+  } catch (error) {
+    console.error("Error loading courses:", error);
+  }
+}
+// Llama a la función al cargar la página
+loadCourses();
+
+
+// Contact Form Handling
+document.getElementById('contactForm')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  
+  // Feedback visual
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    
+    if (response.ok) {
+      // Redirección manual (como respaldo)
+      window.location.href = form.querySelector('input[name="_next"]').value;
+    } else {
+      throw new Error('Form submission failed');
+    }
+  } catch (error) {
+    // Mensaje de error si falla la redirección
+    const errorMsg = document.createElement('p');
+    errorMsg.className = 'form-error';
+    errorMsg.innerHTML = '⚠️ Error sending message. Please try again.';
+    form.appendChild(errorMsg);
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = 'Send Message';
+  }
+});
